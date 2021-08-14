@@ -129,7 +129,8 @@ main section {
 
 /*Sets up the project 1 image to be bigger, and adds a gradient for a haze over the image when not hovered over*/
 .project1 {
-    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/ScreenshotTripleX.PNG) ;
+    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/National_Parks.PNG);
+    background-size: cover;
     display: flex;
     height: 50vh;
     margin: 20px;
@@ -173,7 +174,7 @@ main section {
 
 /*Sets up the pseudoclass hover for the project images so that when hovered over they lose their gradient and become a clear image*/
 .project1:hover{
-    background-image: url(./images/ScreenshotTripleX.PNG);
+    background-image: url(./images/National_Parks.PNG);
 }
 
 .project2:hover{
