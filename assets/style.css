@@ -1,0 +1,333 @@
+/*declares variables for multiple occasions*/
+:root {
+    --white: #f5f5f5;
+    --lightpink: rgb(243, 202, 226);
+    --purple: #2b153d;
+}
+
+/*Structures page and sets font type for page*/
+* {
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*Sets background color of body and structure*/
+body {
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+/*Sets up our flex box in the header, sets up name and nav bar to be on opposite ends of the same space*/
+header {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    padding: 0 50px 0 0;
+}
+
+/*Styling for the name class*/
+.name {
+    margin: 10px;
+    padding: 5px 5px 5px 20px;
+    color: var(--purple);
+    font-size: 2.5em;
+    box-sizing: 0px
+}
+
+/*Removes bullets from navigation bar, positions links side by side, changes font size of links*/
+nav ul li {
+    list-style-type: none;
+    display: inline-flex;
+    flex-direction: row;
+    margin-right: 5px;
+    cursor: pointer;
+    border-bottom: 2px solid var(--purple);
+    padding: 0 10px 0 10px;
+    font-size: 1.5em;
+}
+
+/*Gets rid of standard hyperlink underline, adjusts color of the link text*/
+nav li a {
+    text-decoration: none;
+    color: var(--purple);
+}
+
+/*sets up flex box and dimensions for backgground image*/
+.banner {
+    display:flex;
+    background-image: url(./images/galaxy3.jpg) ;
+    background-size: auto;
+    height: 20vh;
+    width: 100%;
+    flex: 1;
+    z-index: -2;
+}
+/*Sets size of my headshot*/
+.headshot {
+    height: 20vh;
+    width: 20vh;
+}
+/*sets the flex box, size, and color for main*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: var(--purple);
+    width: 100%;
+    margin: 0%;
+    flex: 100%;
+}
+/* sets the flexbox for sections under main, changed sizing a bit*/
+main section {
+    display: flex;
+    width: 80%;
+    margin-bottom: 30px;
+}
+/*Sets up the lefthand_column class for flex and to be on the left*/
+.lefthand_column {
+    display: flex;
+    margin-left: 20vh;
+    margin-right: 1vh;
+    text-align: right;
+    word-wrap: normal;
+    font-size: 2em;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+/*Sets the righthand-column class to the right and adds the border for a distinction between section title and content*/
+.righthand_column {
+    display: flex;
+    flex-flow: row wrap;
+    border-left: 5px solid var(--purple);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/*Sets size of the text under the about me class*/
+#p_aboutme {
+    padding: 30px;
+    font-size: 1.2em;
+}
+/*Sets the location, size and border of the project names so that it can sit inside of the project image*/
+.text_project {
+    color: var(--white);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-self: bottom;
+    background-color: var(--purple);
+    padding: 10px;
+}
+/*Note to reader, I set these as background images in CSS as opposed to HTML because I could not get all the functions to work correctly if i did <img> tags. The flexbox wouldnt work correctly and neither would the linear gradient. I have assigned them titles within the HTML to still allow for accesibility */
+
+/*Sets up the project 1 image to be bigger, and adds a gradient for a haze over the image when not hovered over*/
+.project1 {
+    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/ScreenshotTripleX.PNG) ;
+    display: flex;
+    height: 50vh;
+    margin: 20px;
+    width: 100%;
+    flex: 100%;
+}
+/*Sets up the project 2 image, size, flex orientation and the linear gradient for the haze over the image*/
+.project2{
+    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/CatMouse.PNG);
+    display: inline-flex;
+    height: 20vh;
+    flex: 35%;
+    justify-content: center;
+    width: 50%;
+    margin: 0 0 20px 20px;
+}
+/*Added margins to project 4 to match project 2*/
+.project4{
+    margin: 0 0 20px 20px;
+}
+/*Added margins to projects 3,5 to align them correctly with spacing*/
+.project3, .project5{
+    margin: 0 0 20px 20px;
+}
+/*Sets up the project 3,4,5 image, size, and flex orientation and the linear gradient for the haze over the image*/
+.project3, .project4, .project5{
+    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/comingsoon.png);
+    display: inline-flex;
+    height: 20vh;
+    flex: 35%;
+    justify-content: center;
+    width: 50%;
+}
+/*Sets up image sizing on the projects and changed the cursor when on the image*/
+.project1, .project2, .project3, .project4, .project5 {
+    cursor: pointer;
+    justify-content: flex-start;
+    background-size: contain;
+    align-items: flex-end;
+}
+
+/*Sets up the pseudoclass hover for the project images so that when hovered over they lose their gradient and become a clear image*/
+.project1:hover{
+    background-image: url(./images/ScreenshotTripleX.PNG);
+}
+
+.project2:hover{
+    background-image: url(./images/CatMouse.PNG);
+}
+
+.project3:hover, .project4:hover, .project5:hover{
+    background-image: url(./images/comingsoon.png);
+}
+/*Gets rid of text underline on the project text since they are links*/
+.work a {
+    text-decoration: none;
+}
+/*Sets the flexbox for the contact me class*/
+.contactme ul{
+    display: inline-flex;
+    list-style-type: none; 
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-flow: row wrap;
+    color: var(--purple);
+}
+/*Adds a small border under the links*/
+.contactme li {
+    border-bottom: 5px solid var(--purple);
+}
+/*Gets rid of link decoration on the text and sets spscing and content*/
+.contactme a{
+    text-decoration: none;
+    color: var(--purple);
+    justify-content: space-between;
+}
+/*Sets up the footer to align in the middle*/
+footer{
+    display: flex;
+    justify-content: center;
+    color: var(--purple);
+}
+/*Start of media queries*/
+
+/*This will set up the view for anything up to 1024px which I felt would satisfy most tablets*/
+@media screen and (max-width: 1024px) {
+    .banner{
+        background-size: cover;
+    }
+    
+    main section{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1, h2, h3{
+        font-size: .8em;
+    }
+
+    h2{
+        font-size: smaller;
+    }
+
+    .lefthand_column{
+        width: 100%;
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+
+    .righthand_column{
+        border: none;
+    }
+
+    #p_aboutme{
+        font-size: 1.5em;
+    }
+
+    .project1{
+        height: 30vh;
+        width: 100%;
+        margin: 10px 10px 10px 20px;
+        flex: 100%;
+    }
+
+    .project2, .project3, .project4, .project5{
+        height: 15vh;
+        width: 100%;
+        margin: 10px 10px 10px 20px;
+        flex: 100%;
+    }
+}
+/*This will set up the view for anything up to 768px which will satisfy phones*/
+@media screen and (max-width: 768px) {
+    header{
+        text-align: center;
+        flex-flow: column wrap;
+    }
+
+    .nav li{
+        border: 1px solid var(--purple);
+        font-size: .5em;
+    }
+
+    .banner{
+        background-size: cover;
+    }
+
+    main section{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+    }
+
+    .about-me{
+        font-size: .5em;
+    }
+
+    h1, h2, h3{
+        font-size: .5em;
+    }
+
+    .lefthand_column{
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .righthand_column{
+        border: none;
+    }
+
+    .project1{
+        height: 20vh;
+        width: 100%;
+        margin: 10px;
+        flex: 100%;
+    }
+
+    .project2, .project3, .project4, .project5{
+        height: 10vh;
+        width: 50%;
+        margin: 10px;
+        flex: 100%;
+    }
+
+    .text_project{
+        font-size: .6em;
+    }
+
+    .contactme ul{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .contactme li{
+        border: 1px solid var(--purple);
+    }
+}    
