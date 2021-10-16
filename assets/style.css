@@ -139,7 +139,7 @@ main section {
 }
 /*Sets up the project 2 image, size, flex orientation and the linear gradient for the haze over the image*/
 .project2{
-    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/weather_screenshot.PNG);
+    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/scrypts.PNG);
     display: inline-flex;
     height: 20vh;
     flex: 35%;
@@ -149,7 +149,7 @@ main section {
 }
 
 .project3{
-    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/hw_quiz_example.PNG);
+    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/weather_screenshot.PNG);
     display: inline-flex;
     height: 20vh;
     flex: 35%;
@@ -159,7 +159,7 @@ main section {
 /*Added margins to project 4 to match project 2*/
 .project4{
     margin: 0 0 20px 20px;
-    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/ScreenshotTripleX.PNG);
+    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/hw_quiz_example.PNG);
     display: inline-flex;
     height: 20vh;
     flex: 35%;
@@ -173,7 +173,7 @@ main section {
 }
 /*Sets up the project 3,4,5 image, size, and flex orientation and the linear gradient for the haze over the image*/
 .project5{
-    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/comingsoon.png);
+    background-image: linear-gradient(rgba(70, 90, 120, 0.5), rgba(70, 90, 120, 0.5)), url(./images/ScreenshotTripleX.PNG);
     display: inline-flex;
     height: 20vh;
     flex: 35%;
@@ -194,19 +194,19 @@ main section {
 }
 
 .project2:hover{
-    background-image: url(./images/weather_screenshot.PNG);
+    background-image: url(./images/scrypts.PNG);
 }
 
 .project3:hover {
-    background-image: url(./images/hw_quiz_example.PNG);
+    background-image: url(./images/weather_screenshot.PNG);
 }
 
 .project4:hover {
-    background-image: url(./images/ScreenshotTripleX.PNG);
+    background-image: url(./images/hw_quiz_example.PNG);
 }
 
 .project5:hover{
-    background-image: url(./images/comingsoon.png);
+    background-image: url(./images/ScreenshotTripleX.PNG);
 }
 /*Gets rid of text underline on the project text since they are links*/
 .work a {
